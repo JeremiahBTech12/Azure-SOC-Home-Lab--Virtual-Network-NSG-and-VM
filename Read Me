@@ -1,1 +1,9 @@
+This project is a hands-on Azure home lab designed to simulate a Security Operations Center (SOC) environment.
 
+The lab demonstrates:
+- Azure Virtual Network (VNet) and subnet design
+- Network Security Group (NSG) rules for inbound/outbound traffic control
+-Flow logging for networks traffic visibility
+-Least priviledge access and SOC-style monitoring
+
+It is intended for learning, portfolio showcase, and demonstrating foundational cloud security skills to recruiters or SOC teams.
