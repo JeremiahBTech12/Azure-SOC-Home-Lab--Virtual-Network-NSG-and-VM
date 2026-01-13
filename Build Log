@@ -1,1 +1,43 @@
+STEP 1: Create Resource Group
+- Navigate to Azure Portal/ Resource Groups/ Create
+- Name: "rg_Soc_lab
+- Region: Same region for all resources
+
+STEP 2: Create Virtual Network and Subnet
+- Navigate to Virtual Networks/ Create
+- VNet Name: vn_soc_lab
+
+STEP 3: Create Network Security Group (NSG)
+- Navigate to Network Security Groups/ Create
+- Name: "Vm-soc-lab-nsg
+- Add inbound rules:
+  - Allow RDP from my IP only
+  - Explicit deny all other inbound traffic
+-Add outbound rules:
+  - Allow HTTPS outbound
+  - Explicit deny all other outbound traffic
+- Attach NSG to "Subnet-Soc"
+
+STEP 4: Create Virtual MAchine
+- Navigate to Cirtual Machine/ Create
+- Name: VM_soc_lab
+- OS: Windows
+- Networking:
+  - Virtual Network: vn_soc_lab
+  - Subnet: "Subnet-Soc"
+- Disable any public inbound ports outside NSG
+
+STEP 5: Enable Virtual Network Flow Logs
+-Navigate to Azure Portal/ Network Watcher/ Logs/ FLow logs
+- Enable Virtual Network
+- Create Storage account
+- Retention (30 Days)
+- Save
+
+
+
+
+
+
+
 
